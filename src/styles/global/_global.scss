@@ -1,0 +1,12 @@
+@use "../mixins";
+@use "variables";
+
+body {
+  background-color: variables.$g-color-body-background;
+  font-family: variables.$g-font-family-body;
+  color: variables.$g-color-body;
+}
+
+.title-st {
+  font-family: variables.$g-font-family-body-2;
+}

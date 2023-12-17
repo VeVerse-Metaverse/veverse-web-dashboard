@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "global";
+@import "mixins";
+@import "section";
+@import "views";
+@import "components";
+
+
+.item-block {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+}

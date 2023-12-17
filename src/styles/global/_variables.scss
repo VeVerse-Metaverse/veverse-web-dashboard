@@ -1,0 +1,73 @@
+// Fonts
+
+$g-font-family-body: 'Readex Pro', sans-serif;
+$g-font-family-body-2: 'Bebas Neue', sans-serif;
+
+// Colors
+
+$g-color-white: #ffffff;
+$g-color-dark: #030408;
+$g-color-body: $g-color-white;
+$g-color-body-background: $g-color-dark;
+$g-color-red: #EC475A;
+$g-color-red-gradient: linear-gradient(124.7deg, #EC475A 11.63%, rgba(236, 71, 90, 0) 44.12%), linear-gradient(28.18deg, #FD8147 14.99%, #E54784 99.98%);
+$g-color-blue: #06C0FF;
+$g-color-blue-gradient: linear-gradient(183.43deg, #06C0FF 2.83%, rgba(23, 193, 251, 0) 110.25%);
+$g-color-green: #27AE60;
+$g-color-green-gradient: linear-gradient(180deg, #27AE60 0%, #86C540 100%);
+$g-color-purple: #5D5FEF;
+$g-color-purple-gradient: linear-gradient(180deg, #5D5FEF 0%, #7E14BE 100%);
+$g-color-blue-dark: #56CCF2;
+$g-color-blue-dark-gradient: linear-gradient(180deg, #56CCF2 0%, #2081E2 100%);
+$g-color-orange: #FD8147;
+$g-color-orange-gradient: linear-gradient(180deg, #F2C94C 0%, #FD8147 100%);
+$g-color-warn: #FD2781;
+
+// Values
+
+$g-border-radius: 2px;
+
+// Animations
+
+$g-animation-breakpoint: md !default;
+$g-animation-duration: 0.2s !default;
+$g-animation-function: ease !default;
+$g-transition-breakpoint: md !default;
+$g-transition-duration: 0.2s !default;
+$g-transition-function: ease !default;
+
+// Grid Config
+
+$grid-gutter: 15px;
+$grid-breakpoints: (
+        xs: 0,
+        sm: 568px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1280px
+);
+$container-max-widths: (
+        sm: 522px,
+        md: 708px,
+        lg: 944px,
+        xl: 1240px,
+);
+$container-max-widths-2: (
+        sm: 522px,
+        md: 708px,
+);
+$container-max-widths-sm: (
+        sm: 522px,
+        md: 680px
+);
+$container-max-widths-md: (
+        sm: 522px,
+        md: 708px,
+        lg: 830px
+);
+$container-max-widths-lg: (
+        sm: 522px,
+        md: 708px,
+        lg: 944px,
+        xl: 1030px,
+);

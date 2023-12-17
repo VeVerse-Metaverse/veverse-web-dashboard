@@ -1,0 +1,5 @@
+project: veverse-web
+configVersion: 1
+---
+image: webtest
+dockerfile: test.Dockerfile

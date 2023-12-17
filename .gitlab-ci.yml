@@ -1,0 +1,72 @@
+variables:
+  WERF_VERSION: 1.2 stable
+
+stages:
+  - deploy
+
+before_script:
+  - source ~/.bashrc
+  - type multiwerf && source $(multiwerf use ${WERF_VERSION} --as-file)
+  - type werf && source $(werf ci-env gitlab --as-file)
+
+#region Deploy
+
+Deploy to Dev:
+  stage: deploy
+  script:
+    - werf converge
+      --env ${ENVIRONMENT}
+      --namespace ${CI_NAMESPACE}
+      --set "global.ci_url=$(cut -d / -f 3 <<< $CI_ENVIRONMENT_URL)"
+      --config="dev.werf.yaml"
+  tags:
+    - aws
+  environment:
+    name: dev
+    url: https://dev.web.veverse.com
+  variables:
+    CI_NAMESPACE: veverse-web-dev
+    ENVIRONMENT: dev
+  only:
+    - main
+  when: always
+
+Deploy to Test:
+  stage: deploy
+  script:
+    - werf converge
+      --env ${ENVIRONMENT}
+      --namespace ${CI_NAMESPACE}
+      --set "global.ci_url=$(cut -d / -f 3 <<< $CI_ENVIRONMENT_URL)"
+      --config="test.werf.yaml"
+  tags:
+    - aws
+  environment:
+    name: test
+    url: https://test.web.veverse.com
+  variables:
+    CI_NAMESPACE: veverse-web-test
+    ENVIRONMENT: test
+  only:
+    - branches
+  when: manual
+
+Deploy to Production:
+  stage: deploy
+  script:
+    - werf converge
+      --env ${ENVIRONMENT}
+      --namespace ${CI_NAMESPACE}
+      --set "global.ci_url=$(cut -d / -f 3 <<< $CI_ENVIRONMENT_URL)"
+      --config="werf.yaml"
+  tags:
+    - aws
+  environment:
+    name: prod
+    url: https://web.veverse.com
+  variables:
+    CI_NAMESPACE: veverse-web-prod
+    ENVIRONMENT: prod
+  only:
+    - tags
+  when: manual

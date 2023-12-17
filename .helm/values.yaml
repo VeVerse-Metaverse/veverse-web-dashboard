@@ -1,0 +1,20 @@
+app:
+  web:
+    command: .
+    apiV1:
+      _default: https://dev.api.example.com
+      dev: https://dev.api.example.com
+      test: https://test.api.example.com
+      prod: https://api.example.com
+    apiV2:
+      _default: https://dev.nextapi.example.com/v2
+      dev: https://dev.nextapi.example.com/v2
+      test: https://test.nextapi.example.com/v2
+      prod: https://nextapi.example.com/v2
+
+clusterrolebinding:
+  namespace:
+    _default: veverse-web-dev
+    prod: veverse-web-prod
+    dev: veverse-web-dev
+    test: veverse-web-test

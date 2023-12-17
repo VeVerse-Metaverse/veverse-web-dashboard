@@ -1,0 +1,66 @@
+@import "signin";
+@import "create-event";
+
+@import "vue-select/dist/vue-select.css";
+@import "nprogress/nprogress.css";
+@import 'node_modules/@vuepic/vue-datepicker/src/VueDatePicker/style/main.scss';
+
+.dp__theme_dark {
+  --dp-background-color: rgba(0, 0, 0, 0.8);
+  --dp-hover-color: rgb(99, 102, 241);
+  --dp-icon-color: #fff;
+  --dp-hover-icon-color: #fff;
+  --dp-primary-color: rgb(99, 102, 241);
+  --dp-success-color: #ddd;
+}
+
+.dp__menu {
+  border-width: 1pt;
+  border-image-source: linear-gradient(180deg, #5d5fef, #7e14be);
+  border-image-slice: 1;
+
+  &:focus {
+    border-width: 1pt;
+    border-image-source: linear-gradient(180deg, #5d5fef, #7e14be);
+    border-image-slice: 1;
+  }
+}
+
+.dp__today {
+  border-width: 1pt;
+  border-image-source: linear-gradient(180deg, #5d5fef, #7e14be);
+  border-image-slice: 1;
+}
+
+input, textarea, select {
+  border-width: 1pt;
+  background: none;
+  border-image-source: linear-gradient(180deg, #5d5fef, #7e14be);
+  border-image-slice: 1;
+}
+
+
+// vue-select custom styles
+.style-chooser .vs__dropdown-toggle {
+  border-width: 1pt;
+  background: none;
+  border-image-source: linear-gradient(180deg, #5d5fef, #7e14be);
+  border-image-slice: 1;
+  color: #fff;
+}
+
+.style-chooser .vs__search::placeholder,
+.style-chooser .vs__dropdown-menu {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.style-chooser .vs__selected {
+  color: #fff;
+}
+
+.style-chooser .vs__clear,
+.style-chooser .vs__open-indicator {
+  fill: #fff;
+  opacity: 0.4;
+}
